@@ -1,9 +1,12 @@
 #pragma once
-#include <stdexcept>
+
+#include "Dustbin9000.h"
 
 class Tester {
+private:
+   bool throwOutProperBottleCap(Dustbin9000 dustbin, BottleCap const &bottleCap);
+   bool throwOutNotProperBottleCap(Dustbin9000 dustbin, BottleCap const &bottleCap);
+   void throwOutBottleCaps(Dustbin9000 dustbin);
 public:
-   Tester() {
-      throw std::logic_error("Tester class in not implemented yet!");
-   }
+   void run();
 };
